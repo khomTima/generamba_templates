@@ -1,0 +1,14 @@
+# Template information section
+name: nimbus_cell
+summary: Lists
+author: Tima Khomutnikov
+version: 1.0.0
+license: MIT
+
+# The declarations for code files
+code_files:
+
+- {name: CellObject.h, path: Code/cell_object.h.liquid}
+- {name: CellObject.m, path: Codecell_object.m.liquid}
+- {name: Cell.h, path: Code/cell.h.liquid}
+- {name: Cell.m, path: Code/cell.m.liquid}

@@ -1,0 +1,13 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}CellObject.h"
+
+#import "{{ prefix }}{{ module_info.name }}Cell.h"
+
+@implementation {{ prefix }}{{ module_info.name }}CellObject
+
+- (Class)cellClass {
+    return [{{ prefix }}{{ module_info.name }}Cell class];
+}
+
+@end
