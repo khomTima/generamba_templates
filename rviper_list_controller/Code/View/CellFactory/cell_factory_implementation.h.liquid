@@ -1,0 +1,7 @@
+{% include 'header' %}
+
+#import "{{ prefix }}{{ module_info.name }}CellFactory.h"
+
+@interface {{ prefix }}{{ module_info.name }}CellFactoryImplementation : NSObject <{{ prefix }}{{ module_info.name }}CellFactory>
+
+@end

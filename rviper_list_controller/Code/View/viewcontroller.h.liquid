@@ -1,0 +1,17 @@
+{% include 'header' %}
+
+#import <UIKit/UIKit.h>
+
+#import "{{ prefix }}{{ module_info.name }}ViewInput.h"
+
+@protocol {{ prefix }}{{ module_info.name }}ViewOutput;
+@protocol {{ prefix }}{{ module_info.name }}CellFactory;
+@protocol {{ prefix }}{{ module_info.name }}DataDisplayManager;
+
+@interface {{ prefix }}{{ module_info.name }}ViewController : UIViewController <{{ prefix }}{{ module_info.name }}ViewInput>
+
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}ViewOutput> output;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}CellFactory> cellFactory;
+@property (nonatomic, strong) id<{{ prefix }}{{ module_info.name }}DataDisplayManager> dataDisplayManager;
+
+@end

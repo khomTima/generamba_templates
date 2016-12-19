@@ -1,0 +1,32 @@
+{% include 'header' %}
+
+#import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+
+#import "{{ prefix }}{{ module_info.name }}CellFactoryImplementation.h"
+
+@interface {{ prefix }}{{ module_info.name }}CellFactoryImplementationTests : XCTestCase
+
+@property (nonatomic, strong) {{ prefix }}{{ module_info.name }}CellFactoryImplementation *cellFactory;
+
+@end
+
+@implementation {{ prefix }}{{ module_info.name }}CellFactoryImplementationTests
+
+#pragma mark - Настройка окружения для тестирования
+
+- (void)setUp {
+    [super setUp];
+
+    self.cellFactory = [[{{ prefix }}{{ module_info.name }}CellFactoryImplementation alloc] init];
+}
+
+- (void)tearDown {
+    self.cellFactory = nil;
+
+    [super tearDown];
+}
+
+#pragma mark - Тестирование методов {{ prefix }}{{ module_info.name }}CellFactory
+
+@end
